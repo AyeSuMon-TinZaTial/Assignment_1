@@ -6,20 +6,20 @@
 <body>
     <form action="process.php" method="post">
         Student name:
-        <input type="text" name="fname" placeholder="First Name" required>
-        <input type="text" name="lname" placeholder="Last Name" required>
-        <br>
+        <input type="text" name="fname" placeholder="First Name" >
+        <input type="text" name="lname" placeholder="Last Name" >
+        <br><br>
         Father's name:
-        <input type="text" name="father" required>
-        <br>
+        <input type="text" name="father" >
+        <br><br>
         Date of birth:
-        <input type="number" name="day" min="1" max="31" placeholder="Day" required>
-        <input type="number" name="month" min="1" max="12" placeholder="Month" required>
-        <input type="number" name="year" min="1900" max="2025" placeholder="Year" required>
-        <br>
+        <input type="number" name="day" min="1" max="31" placeholder="Day" >
+        <input type="number" name="month" min="1" max="12" placeholder="Month" >
+        <input type="number" name="year" min="1900" max="2025" placeholder="Year" >
+        <br><br>
         Mobile no.: +95
-        <input type="text" name="mobile" pattern="[0-9]{10}" maxlength="10" required>
-        <br>
+        <input type="text" name="mobile" pattern="[0-9]{10}" >
+        <br><br>
 
         <label>Email:</label>
         <input type="email" name="email" ><br><br>
@@ -37,7 +37,17 @@
         <input type="checkbox" name="department[]" value="Computer"> Computer
         <input type="checkbox" name="department[]" value="Business"> Business<br><br>
 
+        Course: <select name="course"  >
+            <option value="select_course">Select Course</option>
+            <option value="html/css">HTML/CSS</option>
+            <option value="ai">AI</option>
+            <option value="php">PHP</option>
+            </select><br><br>
+
+        City: <input type="text" name="city" ><br><br>
         
+        Address: <br><textarea name="address" rows="4" cols="50" ></textarea><br><br> 
+
         <input type="submit" value="Register">
     </form>
 </body>
