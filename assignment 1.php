@@ -37,7 +37,7 @@
         <input type="checkbox" name="department[]" value="Computer"> Computer
         <input type="checkbox" name="department[]" value="Business"> Business<br><br>
 
-        Course: <select name="course"  >
+        Course: <select name="course" style="background-color: lightgrey;" >
             <option value="select_course">Select Course</option>
             <option value="html/css">HTML/CSS</option>
             <option value="ai">AI</option>
@@ -45,7 +45,7 @@
             </select><br><br>
 
         City: <input type="text" name="city" ><br><br>
-        
+
         Address: <br><textarea name="address" rows="4" cols="50" ></textarea><br><br> 
 
         <input type="submit" value="Register">
