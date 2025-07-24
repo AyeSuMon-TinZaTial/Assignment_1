@@ -10,6 +10,7 @@
         <input type="hidden" name="form" value="unsubmitted">
         Student name:
         <input type="text" name="fname" placeholder="First Name" >
+        -
         <input type="text" name="lname" placeholder="Last Name" >
         <br><br>
         Father's name:
@@ -17,8 +18,11 @@
         <br><br>
         Date of birth:
         <input type="number" name="day" min="1" max="31" placeholder="Day" >
+        -
         <input type="number" name="month" min="1" max="12" placeholder="Month" >
+        -
         <input type="number" name="year" min="1900" max="2025" placeholder="Year" >
+        (DD-MM-YYYY)
         <br><br>
         Mobile no.: +95-
         <input type="text" name="mobile"  >
