@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Registration</title>
+    <title>Student Registration Form</title>
 </head>
 <body>
+    <h2>Student Registration Form</h2>
     <form action="process.php" method="post">
+
+        <input type="hidden" name="form" value="unsubmitted">
         Student name:
         <input type="text" name="fname" placeholder="First Name" >
         <input type="text" name="lname" placeholder="Last Name" >
@@ -17,8 +20,8 @@
         <input type="number" name="month" min="1" max="12" placeholder="Month" >
         <input type="number" name="year" min="1900" max="2025" placeholder="Year" >
         <br><br>
-        Mobile no.: +95
-        <input type="text" name="mobile" pattern="[0-9]{10}" >
+        Mobile no.: +95-
+        <input type="text" name="mobile"  >
         <br><br>
 
         <label>Email:</label>

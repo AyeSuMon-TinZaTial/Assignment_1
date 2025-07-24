@@ -1,5 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Resultt</title>
+</head>
+<body>
+    <h2>Form Submission Result</h2>
+</body>
+</html>
+
 <?php
-$errors = [];
+ if(!isset($_POST['form'])) {
+        echo "<p>No data submitted.</p>";
+            }
+else{ $errors = [];
 
 $day = isset($_POST['day']) ? (int)$_POST['day'] : '';
 $month = isset($_POST['month']) ? (int)$_POST['month'] : '';
@@ -104,6 +119,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Address: " . $address . "<br>";
     }
 
-
+}
 
 ?>
