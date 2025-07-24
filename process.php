@@ -32,3 +32,62 @@ if ($errors) {
     echo "DOB: " . htmlspecialchars($day) . "-" . htmlspecialchars($month) . "-" . htmlspecialchars($year) . "<br>";
     echo "Mobile: +91-" . htmlspecialchars($_POST['mobile']) . "<br>";
 }
+?>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize and get inputs
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $password = trim($_POST['password']);
+    $gender = $_POST['gender'] ;
+    $department = isset($_POST['department']) ? $_POST['department'] : [];
+
+    $errors = [];
+
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Email is required.";
+    }
+
+    // Validate password
+    if (empty($password) ) {
+        $errors[] = "Password is required.";
+    }
+
+    // Validate gender
+    if(empty($gender)) {
+        $errors[] = "Gender is required.";
+    }
+
+    // Validate department (must be at least one and valid values)
+    $valid_departments = ['English', 'Computer', 'Business'];
+    if (empty($department)) {
+        $errors[] = "Department is required.";
+    } else {
+        foreach ($department as $dept) {
+            if (!in_array($dept, $valid_departments)) {
+                $errors[] = "Invalid department selected: " . htmlspecialchars($dept);
+                break;
+            }
+        }
+    
+    }
+}
+   
+
+    // Output
+     if (empty($errors)) {
+        
+        echo "Email: " . htmlspecialchars($email) . "<br>";
+        echo "Gender: " . htmlspecialchars($gender) . "<br>";
+        echo "Departments: " . implode(",", $department) . "<br>";
+    } else {
+        foreach ($errors as $error) {
+            echo "<p style='color: red;'> $error</p>";
+        }
+        echo "Email: " . htmlspecialchars($email) . "<br>";
+        echo "Gender: " . htmlspecialchars($gender) . "<br>";
+        echo "Departments: " . implode(",", $department) . "<br>";
+    }
+
+
+?>

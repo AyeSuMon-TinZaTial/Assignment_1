@@ -20,6 +20,24 @@
         Mobile no.: +95
         <input type="text" name="mobile" pattern="[0-9]{10}" maxlength="10" required>
         <br>
+
+        <label>Email:</label>
+        <input type="email" name="email" ><br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" ><br><br>
+
+        <label>Gender: </label>
+        <input type="radio" name="gender" value="Male" > Male
+        <input type="radio" name="gender" value="Female" > Female
+        <br><br>
+
+      <label>Department:</label><br>
+        <input type="checkbox" name="department[]" value="English"> English
+        <input type="checkbox" name="department[]" value="Computer"> Computer
+        <input type="checkbox" name="department[]" value="Business"> Business<br><br>
+
+        
         <input type="submit" value="Register">
     </form>
 </body>
